@@ -93,8 +93,6 @@ implementation {
                     radioBusy = TRUE;
                 }
             }
-            else
-                DropBlink("From Queue Function");
         }
         return ret;
     }
@@ -113,7 +111,7 @@ implementation {
 
         dbg ("BOOT", "Application booted (%d).\n", TOS_NODE_ID);
 
-        qos_attack = QOS_Attack(TOS_NODE_ID);
+    
 
         if (TOS_NODE_ID == BASESTATION_ID)
         {
@@ -201,10 +199,7 @@ implementation {
                     radioBusy = TRUE;
                 }
             }
-            else
-            {
-                DropBlink("Timer Fired Function");
-            }
+  
         }
         else
         {
@@ -272,9 +267,6 @@ implementation {
     //*********
 
     event void RadioSend.sendDone(message_t* msg, error_t error) {
-        if (error != SUCCESS)
-            FailBlink();
-        else
             atomic
             if (msg == radioQueue[radioOut])
             {
@@ -317,7 +309,6 @@ implementation {
         }
         else
         {
-            FailBlink();
             post RadioSendTask();
         }
     }

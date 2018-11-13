@@ -14,15 +14,9 @@ typedef nx_struct hw3_msg {
     nx_uint16_t destid;
     nx_uint16_t groupid;
     nx_uint16_t counter;
+    nx_uint16_t noiselvl;
+    nx_uint8_t taken;
 } hw3_msg;
 
-typedef nx_struct parking_msg {
-	nx_uint32_t time;
-	nx_uint16_t nodeid;
-	nx_uint16_6 destid;
-	nx_uint16_t groupid;
-	nx_uint16_t counter;
-	nx_uint16_t noiselevel;
-} parking_msg;
 
 #endif /* HW3_H */
