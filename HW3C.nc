@@ -24,7 +24,6 @@ implementation {
     uint64_t total_delay = 0;
     uint64_t delay;
     uint8_t my_parent;
-    uint8_t qos_attack;
     bool active = FALSE;
 
     /*to handle message buffer */
@@ -54,66 +53,11 @@ implementation {
         switch (nodeid)
         {
             case 1:
+		parent = 0;
             case 2:
-            case 9:
-            case 10:
-            case 12:
-                parent = 0;
-                break;
+		parent = 0;
             case 3:
-            case 4:
-                parent = 1;
-                break;
-            case 5:
-                parent = 2;
-                break;
-            case 6:
-                parent = 5;
-                break;
-            case 7:
-                parent = 4;
-                break;
-            case 8:
-                parent = 6;
-                break;
-            case 23:
-            case 24:
-                parent = 9;
-                break;
-            case 21:
-            case 11:
-                parent = 10;
-                break;
-            case 14:
-            case 13:
-                parent = 12;
-                break;
-            case 26:
-                parent = 25;
-                break;
-            case 22:
-            case 20:
-                parent = 21;
-                break;
-            case 19:
-                parent = 11;
-                break;
-            case 15:
-                parent = 14;
-                break;
-            case 16:
-                parent = 15;
-                break;
-            case 17:
-                parent = 13;
-                break;
-            case 18:
-                parent = 16;
-                break;        
-            case 25:
-                parent = 3;
-                break;
-
+		parent = 0;
             default:
                 parent = 0;
                 break;
@@ -121,58 +65,7 @@ implementation {
         return parent;
     }
 
-    int QOS_Attack(int myID)
-    {
-        char buf[20];
-        int array[2];
-        FILE *fp;
-        uint8_t qos_attack_type = 0;
 
-        dbg("FILE", "Inside ReadMaliciousIDs function\n");
-        fp = fopen("malicious_list.txt", "r");
-        dbg("FILE", "After fopen\n");
-        if (fp == NULL)
-        {
-            dbg_clear("ERR", "\n");
-            dbg("ERR", "can not open malicious_list.txt file for read\n\n");
-            exit(-2);
-        }
-        while ( fgets(buf, sizeof(buf), fp) != NULL)
-        {
-            sscanf(buf, "%d %d", &array[0], &array[1]);
-            dbg("FILE", "%d %d\n", array[0], array[1]);
-            if (array[0] == myID)
-            {
-                qos_attack_type = array[1];
-                switch (qos_attack_type)
-                {
-                    case 1:
-                        dbg("ATK", "QOS_ATTACK: DROP\n");
-                        break;
-                    case 2:
-                        dbg("ATK", "QOS_ATTACK: DELAY\n");
-                        break;
-                    case 3:
-                        dbg("ATK", "QOS_ATTACK: INJECT\n");
-                        break;
-                }
-                break;
-            }
-        }
-        fclose(fp);
-        dbg("FILE", "Exiting Read file function\n");
-        return qos_attack_type;
-    }
-
-    void DropBlink(char * str) {
-        call Leds.led2Toggle();
-        dbg("LED", "DropBlink: %s \n", str);
-    }
-
-    void FailBlink() {
-        call Leds.led1Toggle();
-        dbg("LED", "FailBlink\n");
-    }
     void SendBlink(am_addr_t dest) {
         call Leds.led0Toggle();
         dbg("LED", "SendBlink to: %u\n",dest);
@@ -352,18 +245,7 @@ implementation {
                 }
                 else
                 {
-                    if (qos_attack == 1 && active)
-                    {
-                        //Insert it into buffer to be relayed forward
-                        dbg("FWD", "QUEUE it to be relayed to %d\n",my_parent);
-                        //Adjust source and destination of the packet for next hop
-                        call RadioAMPacket.setDestination(msg, my_parent);
-                        call RadioAMPacket.setSource(msg, TOS_NODE_ID);
-                        //Whenever it is active disable it
-                        active = FALSE;
-                    }
-                    else
-                    {
+                  
                         //Insert it into buffer to be relayed forward
                         dbg("FWD", "QUEUE it to be relayed to %d\n",my_parent);
                         //Adjust source and destination of the packet for next hop
@@ -371,7 +253,7 @@ implementation {
                         call RadioAMPacket.setSource(msg, TOS_NODE_ID);
                         msg = QueueIt(msg, payload, len);
                         active = TRUE;
-                    }
+                   
                 }
             }
             else   //not destined for me, drop it!
