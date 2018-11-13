@@ -901,7 +901,7 @@ extern void free(void *__ptr) __attribute((__leaf__)) __attribute((__nothrow__))
 #line 543
 extern void exit(int __status) __attribute((__leaf__)) __attribute((__nothrow__)) __attribute((__noreturn__)) ;
 #line 741
-typedef int (*__compar_fn_t)(const void *arg_0xb7364e90, const void *arg_0xb7363068);
+typedef int (*__compar_fn_t)(const void *arg_0xb738ce90, const void *arg_0xb738b068);
 #line 779
 __extension__ 
 #line 796
@@ -923,7 +923,7 @@ extern double fabs(double __x) __attribute((__leaf__)) __attribute((__nothrow__)
 
 extern double floor(double __x) __attribute((__leaf__)) __attribute((__nothrow__)) __attribute((const)) ;
 #line 250
-extern double erfc(double arg_0xb7315320) __attribute((__leaf__)) __attribute((__nothrow__)) ;
+extern double erfc(double arg_0xb733d320) __attribute((__leaf__)) __attribute((__nothrow__)) ;
 #line 326
 __extension__ 
 
@@ -1341,8 +1341,8 @@ typedef struct hashtable hashtable_t;
 #line 78
 struct hashtable *
 create_hashtable(unsigned int minsize, 
-unsigned int (*hashfunction)(void *arg_0xb71bd6a0), 
-int (*key_eq_fn)(void *arg_0xb71bdae8, void *arg_0xb71bdc60));
+unsigned int (*hashfunction)(void *arg_0xb71e56a0), 
+int (*key_eq_fn)(void *arg_0xb71e5ae8, void *arg_0xb71e5c60));
 #line 103
 #line 102
 int 
@@ -1958,7 +1958,7 @@ struct tm;
 
 struct tm;
 # 46 "/home/wsn/tinyos-main/tos/lib/tossim/randomlib.h"
-static inline void RandomInitialise(int arg_0xb708dd50, int arg_0xb708dea8);
+static inline void RandomInitialise(int arg_0xb70b5d50, int arg_0xb70b5ea8);
 static double RandomUniform(void );
 # 51 "/home/wsn/tinyos-main/tos/lib/tossim/sim_noise.c"
 int numCase1 = 0;
@@ -4199,11 +4199,11 @@ static error_t PlatformC__Init__init(void );
 # 67 "/home/wsn/tinyos-main/tos/interfaces/TaskBasic.nc"
 static error_t SimSchedulerBasicP__TaskBasic__postTask(
 # 49 "/home/wsn/tinyos-main/tos/lib/tossim/SimSchedulerBasicP.nc"
-uint8_t arg_0xb6fdd970);
+uint8_t arg_0xb7005970);
 # 75 "/home/wsn/tinyos-main/tos/interfaces/TaskBasic.nc"
 static void SimSchedulerBasicP__TaskBasic__default__runTask(
 # 49 "/home/wsn/tinyos-main/tos/lib/tossim/SimSchedulerBasicP.nc"
-uint8_t arg_0xb6fdd970);
+uint8_t arg_0xb7005970);
 # 57 "/home/wsn/tinyos-main/tos/interfaces/Scheduler.nc"
 static void SimSchedulerBasicP__Scheduler__init(void );
 
@@ -4246,7 +4246,7 @@ static long long int SimMoteP__SimMote__getStartTime(void );
 # 80 "/home/wsn/tinyos-main/tos/interfaces/AMSend.nc"
 static error_t TossimActiveMessageC__AMSend__send(
 # 47 "/home/wsn/tinyos-main/tos/lib/tossim/TossimActiveMessageC.nc"
-am_id_t arg_0xb6ed7c20, 
+am_id_t arg_0xb6effc20, 
 # 80 "/home/wsn/tinyos-main/tos/interfaces/AMSend.nc"
 am_addr_t addr, 
 #line 71
@@ -4269,7 +4269,7 @@ message_t *
 
 TossimActiveMessageC__Snoop__default__receive(
 # 49 "/home/wsn/tinyos-main/tos/lib/tossim/TossimActiveMessageC.nc"
-am_id_t arg_0xb6ec8cc0, 
+am_id_t arg_0xb6ef0cc0, 
 # 71 "/home/wsn/tinyos-main/tos/interfaces/Receive.nc"
 message_t * msg, 
 void * payload, 
@@ -4316,7 +4316,7 @@ message_t *
 
 TossimActiveMessageC__Receive__default__receive(
 # 48 "/home/wsn/tinyos-main/tos/lib/tossim/TossimActiveMessageC.nc"
-am_id_t arg_0xb6ec8628, 
+am_id_t arg_0xb6ef0628, 
 # 71 "/home/wsn/tinyos-main/tos/interfaces/Receive.nc"
 message_t * msg, 
 void * payload, 
@@ -4543,11 +4543,11 @@ static void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC__0__TimerFrom__f
 #line 83
 static void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC__0__Timer__default__fired(
 # 48 "/home/wsn/tinyos-main/tos/lib/timer/VirtualizeTimerC.nc"
-uint8_t arg_0xb6ab63a8);
+uint8_t arg_0xb6ade3a8);
 # 64 "/home/wsn/tinyos-main/tos/lib/timer/Timer.nc"
 static void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC__0__Timer__startPeriodic(
 # 48 "/home/wsn/tinyos-main/tos/lib/timer/VirtualizeTimerC.nc"
-uint8_t arg_0xb6ab63a8, 
+uint8_t arg_0xb6ade3a8, 
 # 64 "/home/wsn/tinyos-main/tos/lib/timer/Timer.nc"
 uint32_t dt);
 # 61 "/home/wsn/tinyos-main/tos/lib/timer/LocalTime.nc"
@@ -4578,7 +4578,7 @@ error_t error);
 # 110 "/home/wsn/tinyos-main/tos/interfaces/AMSend.nc"
 static void /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__AMSend__sendDone(
 # 48 "/home/wsn/tinyos-main/tos/system/AMQueueImplP.nc"
-am_id_t arg_0xb6a5f0a0, 
+am_id_t arg_0xb6a870a0, 
 # 103 "/home/wsn/tinyos-main/tos/interfaces/AMSend.nc"
 message_t * msg, 
 
@@ -4591,7 +4591,7 @@ error_t error);
 # 75 "/home/wsn/tinyos-main/tos/interfaces/Send.nc"
 static error_t /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__Send__send(
 # 46 "/home/wsn/tinyos-main/tos/system/AMQueueImplP.nc"
-uint8_t arg_0xb6a606a8, 
+uint8_t arg_0xb6a886a8, 
 # 67 "/home/wsn/tinyos-main/tos/interfaces/Send.nc"
 message_t * msg, 
 
@@ -4605,7 +4605,7 @@ uint8_t len);
 #line 100
 static void /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__Send__default__sendDone(
 # 46 "/home/wsn/tinyos-main/tos/system/AMQueueImplP.nc"
-uint8_t arg_0xb6a606a8, 
+uint8_t arg_0xb6a886a8, 
 # 96 "/home/wsn/tinyos-main/tos/interfaces/Send.nc"
 message_t * msg, 
 
@@ -4639,7 +4639,7 @@ int sim_main_start_mote(void )   ;
 # 75 "/home/wsn/tinyos-main/tos/interfaces/TaskBasic.nc"
 static void SimSchedulerBasicP__TaskBasic__runTask(
 # 49 "/home/wsn/tinyos-main/tos/lib/tossim/SimSchedulerBasicP.nc"
-uint8_t arg_0xb6fdd970);
+uint8_t arg_0xb7005970);
 
 
 
@@ -4827,7 +4827,7 @@ static am_addr_t TossimActiveMessageC__amAddress(void );
 # 110 "/home/wsn/tinyos-main/tos/interfaces/AMSend.nc"
 static void TossimActiveMessageC__AMSend__sendDone(
 # 47 "/home/wsn/tinyos-main/tos/lib/tossim/TossimActiveMessageC.nc"
-am_id_t arg_0xb6ed7c20, 
+am_id_t arg_0xb6effc20, 
 # 103 "/home/wsn/tinyos-main/tos/interfaces/AMSend.nc"
 message_t * msg, 
 
@@ -4846,7 +4846,7 @@ message_t *
 
 TossimActiveMessageC__Snoop__receive(
 # 49 "/home/wsn/tinyos-main/tos/lib/tossim/TossimActiveMessageC.nc"
-am_id_t arg_0xb6ec8cc0, 
+am_id_t arg_0xb6ef0cc0, 
 # 71 "/home/wsn/tinyos-main/tos/interfaces/Receive.nc"
 message_t * msg, 
 void * payload, 
@@ -4865,7 +4865,7 @@ message_t *
 
 TossimActiveMessageC__Receive__receive(
 # 48 "/home/wsn/tinyos-main/tos/lib/tossim/TossimActiveMessageC.nc"
-am_id_t arg_0xb6ec8628, 
+am_id_t arg_0xb6ef0628, 
 # 71 "/home/wsn/tinyos-main/tos/interfaces/Receive.nc"
 message_t * msg, 
 void * payload, 
@@ -5402,9 +5402,9 @@ bool HW3C__radioBusy[1000];
 bool HW3C__radioFull[1000];
 #line 50
 static inline uint8_t HW3C__GetMyParent(uint8_t nodeid);
-#line 117
+#line 124
 static inline int HW3C__QOS_Attack(int myID);
-#line 160
+#line 167
 static inline void HW3C__DropBlink(char *str);
 
 
@@ -5420,11 +5420,11 @@ static inline void HW3C__SendBlink(am_addr_t dest);
 
 
 static inline message_t *HW3C__QueueIt(message_t *msg, void *payload, uint8_t len);
-#line 210
+#line 217
 static inline void HW3C__Boot__booted(void );
-#line 241
+#line 248
 static inline void HW3C__RadioControl__startDone(error_t err);
-#line 259
+#line 266
 static inline void HW3C__RadioControl__stopDone(error_t err);
 
 
@@ -5432,11 +5432,11 @@ static inline void HW3C__RadioControl__stopDone(error_t err);
 
 
 static inline void HW3C__Timer0__fired(void );
-#line 324
+#line 331
 static inline message_t *HW3C__RadioReceive__receive(message_t *msg, void *payload, uint8_t len);
-#line 385
+#line 392
 static void HW3C__RadioSend__sendDone(message_t *msg, error_t error);
-#line 403
+#line 410
 static inline void HW3C__RadioSendTask__runTask(void );
 # 53 "/home/wsn/tinyos-main/tos/chips/atm128/timer/HplAtm128TimerCtrl8.nc"
 static Atm128_TIFR_t /*AlarmCounterMilliP.Atm128AlarmAsyncC.Atm128AlarmAsyncP*/Atm128AlarmAsyncP__0__TimerCtrl__getInterruptFlag(void );
@@ -5760,7 +5760,7 @@ static void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC__0__TimerFrom__s
 
 static void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC__0__Timer__fired(
 # 48 "/home/wsn/tinyos-main/tos/lib/timer/VirtualizeTimerC.nc"
-uint8_t arg_0xb6ab63a8);
+uint8_t arg_0xb6ade3a8);
 #line 71
 enum /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC__0____nesc_unnamed4340 {
 #line 71
@@ -5884,7 +5884,7 @@ static inline void /*HW3AppC.AMSenderC.SenderC.AMQueueEntryP*/AMQueueEntryP__0__
 # 80 "/home/wsn/tinyos-main/tos/interfaces/AMSend.nc"
 static error_t /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__AMSend__send(
 # 48 "/home/wsn/tinyos-main/tos/system/AMQueueImplP.nc"
-am_id_t arg_0xb6a5f0a0, 
+am_id_t arg_0xb6a870a0, 
 # 80 "/home/wsn/tinyos-main/tos/interfaces/AMSend.nc"
 am_addr_t addr, 
 #line 71
@@ -5901,7 +5901,7 @@ uint8_t len);
 # 100 "/home/wsn/tinyos-main/tos/interfaces/Send.nc"
 static void /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__Send__sendDone(
 # 46 "/home/wsn/tinyos-main/tos/system/AMQueueImplP.nc"
-uint8_t arg_0xb6a606a8, 
+uint8_t arg_0xb6a886a8, 
 # 96 "/home/wsn/tinyos-main/tos/interfaces/Send.nc"
 message_t * msg, 
 
@@ -6374,9 +6374,9 @@ inline static void HW3C__Leds__led2Toggle(void ){
 #line 100
 }
 #line 100
-# 160 "HW3C.nc"
+# 167 "HW3C.nc"
 static inline void HW3C__DropBlink(char *str)
-#line 160
+#line 167
 {
   HW3C__Leds__led2Toggle();
   sim_log_debug(174U, "LED", "DropBlink: %s \n", str);
@@ -6397,7 +6397,7 @@ inline static error_t HW3C__RadioSendTask__postTask(void ){
 #line 67
 }
 #line 67
-# 174 "HW3C.nc"
+# 181 "HW3C.nc"
 static inline message_t *HW3C__QueueIt(message_t *msg, void *payload, uint8_t len)
 {
   message_t *ret = msg;
@@ -6424,9 +6424,9 @@ static inline message_t *HW3C__QueueIt(message_t *msg, void *payload, uint8_t le
         HW3C__DropBlink("From Queue Function");
         }
     }
-#line 199
+#line 206
     __nesc_atomic_end(__nesc_atomic); }
-#line 199
+#line 206
   return ret;
 }
 
@@ -6495,12 +6495,12 @@ inline static am_addr_t HW3C__RadioAMPacket__destination(message_t * amsg){
 #line 78
 }
 #line 78
-# 324 "HW3C.nc"
+# 331 "HW3C.nc"
 static inline message_t *HW3C__RadioReceive__receive(message_t *msg, void *payload, uint8_t len)
 {
   uint32_t localTime;
 
-#line 327
+#line 334
   if (len == sizeof(hw3_msg )) 
     {
       hw3_msg *btrpkt = (hw3_msg *)payload;
@@ -6564,13 +6564,13 @@ static inline message_t *TossimActiveMessageC__Receive__default__receive(am_id_t
 }
 
 # 78 "/home/wsn/tinyos-main/tos/interfaces/Receive.nc"
-inline static message_t * TossimActiveMessageC__Receive__receive(am_id_t arg_0xb6ec8628, message_t * msg, void * payload, uint8_t len){
+inline static message_t * TossimActiveMessageC__Receive__receive(am_id_t arg_0xb6ef0628, message_t * msg, void * payload, uint8_t len){
 #line 78
   nx_struct message_t *__nesc_result;
 #line 78
 
 #line 78
-  switch (arg_0xb6ec8628) {
+  switch (arg_0xb6ef0628) {
 #line 78
     case 6:
 #line 78
@@ -6580,7 +6580,7 @@ inline static message_t * TossimActiveMessageC__Receive__receive(am_id_t arg_0xb
 #line 78
     default:
 #line 78
-      __nesc_result = TossimActiveMessageC__Receive__default__receive(arg_0xb6ec8628, msg, payload, len);
+      __nesc_result = TossimActiveMessageC__Receive__default__receive(arg_0xb6ef0628, msg, payload, len);
 #line 78
       break;
 #line 78
@@ -6713,13 +6713,13 @@ static inline message_t *TossimActiveMessageC__Snoop__default__receive(am_id_t i
 }
 
 # 78 "/home/wsn/tinyos-main/tos/interfaces/Receive.nc"
-inline static message_t * TossimActiveMessageC__Snoop__receive(am_id_t arg_0xb6ec8cc0, message_t * msg, void * payload, uint8_t len){
+inline static message_t * TossimActiveMessageC__Snoop__receive(am_id_t arg_0xb6ef0cc0, message_t * msg, void * payload, uint8_t len){
 #line 78
   nx_struct message_t *__nesc_result;
 #line 78
 
 #line 78
-    __nesc_result = TossimActiveMessageC__Snoop__default__receive(arg_0xb6ec8cc0, msg, payload, len);
+    __nesc_result = TossimActiveMessageC__Snoop__default__receive(arg_0xb6ef0cc0, msg, payload, len);
 #line 78
 
 #line 78
@@ -6933,7 +6933,7 @@ inline static void HW3C__Timer0__startPeriodic(uint32_t dt){
 #line 64
 }
 #line 64
-# 241 "HW3C.nc"
+# 248 "HW3C.nc"
 static inline void HW3C__RadioControl__startDone(error_t err)
 {
   if (err == SUCCESS) 
@@ -6964,7 +6964,7 @@ static inline void TossimPacketModelC__startDoneTask__runTask(void )
   TossimPacketModelC__Control__startDone(SUCCESS);
 }
 
-# 259 "HW3C.nc"
+# 266 "HW3C.nc"
 static inline void HW3C__RadioControl__stopDone(error_t err)
 {
 }
@@ -7018,9 +7018,9 @@ static __inline  int8_t __nesc_hton_int8(void * target, int8_t value)
 }
 
 # 110 "/home/wsn/tinyos-main/tos/interfaces/AMSend.nc"
-inline static void TossimActiveMessageC__AMSend__sendDone(am_id_t arg_0xb6ed7c20, message_t * msg, error_t error){
+inline static void TossimActiveMessageC__AMSend__sendDone(am_id_t arg_0xb6effc20, message_t * msg, error_t error){
 #line 110
-  /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__AMSend__sendDone(arg_0xb6ed7c20, msg, error);
+  /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__AMSend__sendDone(arg_0xb6effc20, msg, error);
 #line 110
 }
 #line 110
@@ -7093,9 +7093,9 @@ inline static void HW3C__Leds__led1Toggle(void ){
 #line 83
 }
 #line 83
-# 165 "HW3C.nc"
+# 172 "HW3C.nc"
 static inline void HW3C__FailBlink(void )
-#line 165
+#line 172
 {
   HW3C__Leds__led1Toggle();
   sim_log_debug(175U, "LED", "FailBlink\n");
@@ -7160,22 +7160,22 @@ inline static void HW3C__Leds__led0Toggle(void ){
 #line 67
 }
 #line 67
-# 169 "HW3C.nc"
+# 176 "HW3C.nc"
 static inline void HW3C__SendBlink(am_addr_t dest)
-#line 169
+#line 176
 {
   HW3C__Leds__led0Toggle();
   sim_log_debug(176U, "LED", "SendBlink to: %u\n", dest);
 }
 
 # 80 "/home/wsn/tinyos-main/tos/interfaces/AMSend.nc"
-inline static error_t /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__AMSend__send(am_id_t arg_0xb6a5f0a0, am_addr_t addr, message_t * msg, uint8_t len){
+inline static error_t /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__AMSend__send(am_id_t arg_0xb6a870a0, am_addr_t addr, message_t * msg, uint8_t len){
 #line 80
   unsigned char __nesc_result;
 #line 80
 
 #line 80
-  __nesc_result = TossimActiveMessageC__AMSend__send(arg_0xb6a5f0a0, addr, msg, len);
+  __nesc_result = TossimActiveMessageC__AMSend__send(arg_0xb6a870a0, addr, msg, len);
 #line 80
 
 #line 80
@@ -7397,9 +7397,9 @@ inline static void * HW3C__RadioPacket__getPayload(message_t * msg, uint8_t len)
 #line 126
 }
 #line 126
-# 403 "HW3C.nc"
+# 410 "HW3C.nc"
 static inline void HW3C__RadioSendTask__runTask(void )
-#line 403
+#line 410
 {
   uint8_t len;
   am_addr_t addr;
@@ -7411,13 +7411,13 @@ static inline void HW3C__RadioSendTask__runTask(void )
       {
         HW3C__radioBusy[sim_node()] = FALSE;
         {
-#line 413
+#line 420
           __nesc_atomic_end(__nesc_atomic); 
-#line 413
+#line 420
           return;
         }
       }
-#line 415
+#line 422
     __nesc_atomic_end(__nesc_atomic); }
   msg = HW3C__radioQueue[sim_node()][HW3C__radioOut[sim_node()]];
 
@@ -7639,9 +7639,9 @@ static inline void /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__Send__default__send
 }
 
 # 100 "/home/wsn/tinyos-main/tos/interfaces/Send.nc"
-inline static void /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__Send__sendDone(uint8_t arg_0xb6a606a8, message_t * msg, error_t error){
+inline static void /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__Send__sendDone(uint8_t arg_0xb6a886a8, message_t * msg, error_t error){
 #line 100
-  switch (arg_0xb6a606a8) {
+  switch (arg_0xb6a886a8) {
 #line 100
     case 0U:
 #line 100
@@ -7651,7 +7651,7 @@ inline static void /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__Send__sendDone(uint
 #line 100
     default:
 #line 100
-      /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__Send__default__sendDone(arg_0xb6a606a8, msg, error);
+      /*AMQueueP.AMQueueImplP*/AMQueueImplP__0__Send__default__sendDone(arg_0xb6a886a8, msg, error);
 #line 100
       break;
 #line 100
@@ -7695,9 +7695,9 @@ static inline void SimSchedulerBasicP__TaskBasic__default__runTask(uint8_t id)
 }
 
 # 75 "/home/wsn/tinyos-main/tos/interfaces/TaskBasic.nc"
-inline static void SimSchedulerBasicP__TaskBasic__runTask(uint8_t arg_0xb6fdd970){
+inline static void SimSchedulerBasicP__TaskBasic__runTask(uint8_t arg_0xb7005970){
 #line 75
-  switch (arg_0xb6fdd970) {
+  switch (arg_0xb7005970) {
 #line 75
     case TossimPacketModelC__startDoneTask:
 #line 75
@@ -7755,7 +7755,7 @@ inline static void SimSchedulerBasicP__TaskBasic__runTask(uint8_t arg_0xb6fdd970
 #line 75
     default:
 #line 75
-      SimSchedulerBasicP__TaskBasic__default__runTask(arg_0xb6fdd970);
+      SimSchedulerBasicP__TaskBasic__default__runTask(arg_0xb7005970);
 #line 75
       break;
 #line 75
@@ -8620,14 +8620,14 @@ inline static void HW3C__RadioPacket__setPayloadLength(message_t * msg, uint8_t 
 #line 94
 }
 #line 94
-# 265 "HW3C.nc"
+# 272 "HW3C.nc"
 static inline void HW3C__Timer0__fired(void )
-#line 265
+#line 272
 {
   message_t *msg;
   hw3_msg *btrpkt;
 
-#line 268
+#line 275
   HW3C__counter[sim_node()]++;
 
 
@@ -8657,11 +8657,11 @@ static inline void HW3C__Timer0__fired(void )
             if (HW3C__radioIn[sim_node()] >= HW3C__RADIO_QUEUE_LEN) {
               HW3C__radioIn[sim_node()] = 0;
               }
-#line 296
+#line 303
             if (HW3C__radioIn[sim_node()] == HW3C__radioOut[sim_node()]) {
               HW3C__radioFull[sim_node()] = TRUE;
               }
-#line 298
+#line 305
             if (!HW3C__radioBusy[sim_node()]) 
               {
                 HW3C__RadioSendTask__postTask();
@@ -8672,7 +8672,7 @@ static inline void HW3C__Timer0__fired(void )
           {
             HW3C__DropBlink("Timer Fired Function");
           }
-#line 307
+#line 314
         __nesc_atomic_end(__nesc_atomic); }
     }
   else 
@@ -8694,9 +8694,9 @@ static inline void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC__0__Timer
 }
 
 # 83 "/home/wsn/tinyos-main/tos/lib/timer/Timer.nc"
-inline static void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC__0__Timer__fired(uint8_t arg_0xb6ab63a8){
+inline static void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC__0__Timer__fired(uint8_t arg_0xb6ade3a8){
 #line 83
-  switch (arg_0xb6ab63a8) {
+  switch (arg_0xb6ade3a8) {
 #line 83
     case 0U:
 #line 83
@@ -8706,7 +8706,7 @@ inline static void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC__0__Timer
 #line 83
     default:
 #line 83
-      /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC__0__Timer__default__fired(arg_0xb6ab63a8);
+      /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC__0__Timer__default__fired(arg_0xb6ade3a8);
 #line 83
       break;
 #line 83
@@ -9229,8 +9229,10 @@ static inline uint8_t HW3C__GetMyParent(uint8_t nodeid)
           parent = 1;
       break;
       case 5: 
-        case 6: 
-          parent = 2;
+        parent = 2;
+      break;
+      case 6: 
+        parent = 5;
       break;
       case 7: 
         parent = 4;
@@ -9240,16 +9242,15 @@ static inline uint8_t HW3C__GetMyParent(uint8_t nodeid)
       break;
       case 23: 
         case 24: 
-          case 25: 
-            parent = 9;
+          parent = 9;
       break;
       case 21: 
-        parent = 10;
+        case 11: 
+          parent = 10;
       break;
-      case 11: 
-        case 14: 
-          case 13: 
-            parent = 12;
+      case 14: 
+        case 13: 
+          parent = 12;
       break;
       case 26: 
         parent = 25;
@@ -9261,9 +9262,8 @@ static inline uint8_t HW3C__GetMyParent(uint8_t nodeid)
       case 19: 
         parent = 11;
       break;
-      case 18: 
-        case 15: 
-          parent = 14;
+      case 15: 
+        parent = 14;
       break;
       case 16: 
         parent = 15;
@@ -9271,6 +9271,13 @@ static inline uint8_t HW3C__GetMyParent(uint8_t nodeid)
       case 17: 
         parent = 13;
       break;
+      case 18: 
+        parent = 16;
+      break;
+      case 25: 
+        parent = 3;
+      break;
+
       default: 
         parent = 0;
       break;
@@ -9321,9 +9328,9 @@ static inline int HW3C__QOS_Attack(int myID)
   return qos_attack_type;
 }
 
-#line 210
+#line 217
 static inline void HW3C__Boot__booted(void )
-#line 210
+#line 217
 {
 
   uint8_t i;
@@ -11247,30 +11254,30 @@ static bool SimSchedulerBasicP__Scheduler__runNextTask(void )
   return TRUE;
 }
 
-# 385 "HW3C.nc"
+# 392 "HW3C.nc"
 static void HW3C__RadioSend__sendDone(message_t *msg, error_t error)
-#line 385
+#line 392
 {
   if (error != SUCCESS) {
     HW3C__FailBlink();
     }
   else {
-#line 389
+#line 396
     { __nesc_atomic_t __nesc_atomic = __nesc_atomic_start();
       if (msg == HW3C__radioQueue[sim_node()][HW3C__radioOut[sim_node()]]) 
         {
           if (++HW3C__radioOut[sim_node()] >= HW3C__RADIO_QUEUE_LEN) {
             HW3C__radioOut[sim_node()] = 0;
             }
-#line 394
+#line 401
           if (HW3C__radioFull[sim_node()]) {
             HW3C__radioFull[sim_node()] = FALSE;
             }
         }
-#line 397
+#line 404
       __nesc_atomic_end(__nesc_atomic); }
     }
-#line 397
+#line 404
   HW3C__RadioSendTask__postTask();
 }
 
