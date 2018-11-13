@@ -2,21 +2,21 @@
 import sys
 from TOSSIM import *
 
-# Number of nodes in the simulated network is 27
-number_of_nodes = 27
+# number of nodes is 3, 1 base and 2 sensor
+number_of_nodes = 3
 
 t = Tossim([])
 m = t.mac()
 r = t.radio()
 
 # The type of debug messages that will be printed out. [add, comment and uncomment as you need]
-#t.addChannel("BOOT", sys.stdout)
+t.addChannel("BOOT", sys.stdout)
 t.addChannel("LED", sys.stdout)
 t.addChannel("PKG", sys.stdout)
 t.addChannel("DROP", sys.stdout)
 t.addChannel("FWD", sys.stdout)
 t.addChannel("BASE", sys.stdout)
-#t.addChannel("DBG", sys.stdout)
+t.addChannel("DBG", sys.stdout)
 t.addChannel("ERR", sys.stdout)
 #t.addChannel("FILE", sys.stdout)
 
