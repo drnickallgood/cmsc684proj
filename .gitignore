@@ -2,3 +2,4 @@
 simbuild/*
 *.xml
 *.pyc
+TOSSIM.py

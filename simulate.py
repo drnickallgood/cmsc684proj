@@ -2,8 +2,8 @@
 import sys
 from TOSSIM import *
 
-# number of nodes is 3, 1 base and 2 sensor
-number_of_nodes = 3
+# number of nodes is 4, 1 base and 3 sensor
+number_of_nodes = 4 
 
 t = Tossim([])
 m = t.mac()
