@@ -15,7 +15,7 @@ typedef nx_struct hw3_msg {
     nx_uint16_t groupid;
     nx_uint16_t counter;
     nx_uint16_t noiselvl;
-    nx_uint8_t taken;
+    //nx_uint8_t taken;
 } hw3_msg;
 
 
