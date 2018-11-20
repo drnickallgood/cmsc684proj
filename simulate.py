@@ -4,6 +4,7 @@ from TOSSIM import *
 
 # number of nodes is 4, 1 base and 3 sensor
 number_of_nodes = 4 
+#number_of_nodes = 27 
 
 t = Tossim([])
 m = t.mac()
@@ -42,6 +43,6 @@ for i in range(number_of_nodes):
 	t.getNode(i).createNoiseModel()
 
 # Simulation time is set to 99999
-for i in xrange(99999):
+for i in xrange(10000):
 	t.runNextEvent()
 
