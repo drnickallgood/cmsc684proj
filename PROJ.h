@@ -1,5 +1,5 @@
-#ifndef HW3_H
-#define HW3_H
+#ifndef PROJ_H
+#define PROJ_H
 
 enum {
     AM_HW3 = 6,
@@ -19,4 +19,4 @@ typedef nx_struct hw3_msg {
 } hw3_msg;
 
 
-#endif /* HW3_H */
+#endif 

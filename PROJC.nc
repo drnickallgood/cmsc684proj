@@ -1,9 +1,9 @@
 #include <Timer.h>
-#include "HW3.h"
+#include "PROJ.h"
 #include "AM.h"
 #include <stdio.h>
 
-module HW3C {
+module PROJC {
     uses interface Boot;
     uses interface Leds;
     uses interface Timer<TMilli> as Timer0;

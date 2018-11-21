@@ -1,13 +1,13 @@
 #include <Timer.h>
-#include "HW3.h"
+#include "PROJ.h"
 
-configuration HW3AppC {
+configuration PROJAppC {
 }
 
 implementation {
     components MainC;
     components LedsC;
-    components HW3C as App;
+    components PROJC as App;
     components new TimerMilliC() as Timer0;
     components ActiveMessageC;
     components new AMSenderC(AM_HW3);
